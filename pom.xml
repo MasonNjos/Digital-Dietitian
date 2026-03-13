@@ -18,6 +18,7 @@
 
     <properties>
         <java.version>17</java.version>
+        <start-class>com.digitaldietitian.main</start-class>
     </properties>
 
     <dependencies>
@@ -56,12 +57,15 @@
     </dependencies>
 
     <build>
-        <sourceDirectory>backend/src/main/java</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.digitaldietitian.main</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>
