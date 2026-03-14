@@ -182,4 +182,5 @@ public class NutritionLogService {
     private enum Section {
         NONE, GENERAL, CARBOHYDRATES, LIPIDS, PROTEIN, VITAMINS, MINERALS
     }
+
 }

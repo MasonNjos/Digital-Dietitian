@@ -2,6 +2,8 @@ package com.digitaldietitian.controller;
 
 import com.digitaldietitian.entity.NutritionLog;
 import com.digitaldietitian.service.NutritionLogService;
+import com.digitaldietitian.entity.NutrientEntry;
+import com.digitaldietitian.service.NutrientEntryService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -62,4 +64,5 @@ public class NutritionLogController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
 }
