@@ -15,8 +15,6 @@ public class Food {
     @Column(nullable = false)
     private String name;        // e.g. "Salmon", "Spinach"
 
-    private String category;    // e.g. "Fish", "Leafy Green"
-
     @ElementCollection
     @CollectionTable(
         name = "food_nutrients",
@@ -26,16 +24,13 @@ public class Food {
 
     public Food() {}
 
-    public Food(String name, String category) {
+    public Food(String name) {
         this.name = name;
-        this.category = category;
     }
 
     public Long getId() { return id; }
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
-    public String getCategory() { return category; }
-    public void setCategory(String category) { this.category = category; }
     public List<NutrientEntry> getNutrients() { return nutrients; }
     public void setNutrients(List<NutrientEntry> nutrients) { this.nutrients = nutrients; }
 }
